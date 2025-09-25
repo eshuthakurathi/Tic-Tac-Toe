@@ -1,0 +1,161 @@
+/* ===============================
+   Global Styles
+================================ */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Smooth text rendering */
+body, #root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===============================
+   Board & Squares
+================================ */
+.board-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 4px;
+  border: 2px solid #555;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.5), -4px -4px 10px rgba(255,255,255,0.05);
+  transition: all 0.2s ease;
+}
+
+.square:hover {
+  background: linear-gradient(145deg, #2b2b2b, #383838);
+  transform: scale(1.08);
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.6), -6px -6px 15px rgba(255,255,255,0.08);
+}
+
+.square.highlighted {
+  background: #ffeb3b;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffeb3b, 0 0 30px #ffeb3b55;
+}
+
+/* ===============================
+   Status & Game Info
+================================ */
+.status {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.game-info {
+  margin-top: 20px;
+}
+
+.game-info button {
+  margin: 4px 0;
+}
+
+/* ===============================
+   Buttons
+================================ */
+button {
+  padding: 0.6rem 1.2rem;
+  margin: 6px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #4a90e2, #357ab7);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #357ab7, #4a90e2);
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.6);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   Logo / Animations
+================================ */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+  will-change: filter;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ===============================
+   Cards & Documentation
+================================ */
+.card {
+  padding: 2em;
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  border-radius: 15px;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.5), -4px -4px 15px rgba(255,255,255,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 18px rgba(0,0,0,0.6), -6px -6px 18px rgba(255,255,255,0.08);
+}
+
+.read-the-docs {
+  color: #aaa;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.read-the-docs:hover {
+  color: #fff;
+}
